@@ -1,0 +1,26 @@
+task,startTime,cohortIds,executionTime,parent
+getCdmDataSourceInformation,2023-07-12T16:17:40Z,,7.44904184341431,executeDiagnostics
+observationPeriodDateRange,2023-07-12T16:17:48Z,,12.5860979557037,executeDiagnostics
+getInclusionStats,2023-07-12T16:18:02Z,,4.14502882957458,executeDiagnostics
+getInclusionStatsCohortGenerator,2023-07-12T16:18:07Z,,7.07895421981812,getInclusionStats
+getInclusionStats,2023-07-12T16:18:07Z,,10.5000970363617,executeDiagnostics
+instantiateUniqueConceptSets,2023-07-12T16:18:20Z,,8.83006405830383,runConceptSetDiagnostics
+createConceptCountsTable,2023-07-12T16:18:29Z,,7.01969208319982,runConceptSetDiagnostics
+runIncludedSourceConcepts,2023-07-12T16:25:30Z,,5.5385902484258,runConceptSetDiagnostics
+orphanConcepts,2023-07-12T16:31:24Z,concept_set- Clozapine,1.77345838546753,runConceptSetDiagnostics
+orphanConcepts,2023-07-12T16:33:11Z,concept_set- tobacco use,13.3359181880951,runConceptSetDiagnostics
+orphanConcepts,2023-07-12T16:33:24Z,concept_set- Psychotropics,8.9009428024292,runConceptSetDiagnostics
+orphanConcepts,2023-07-12T16:33:34Z,concept_set- tobacco use 2,55.0062990188599,runConceptSetDiagnostics
+orphanConcepts,2023-07-12T16:34:29Z,concept_set- Non-clozapine Psychotic Symptom Treatment,3.03467320203781,runConceptSetDiagnostics
+allOrphanConcepts,2023-07-12T16:31:24Z,,6.13593013286591,runConceptSetDiagnostics
+runConceptSetDiagnostics,2023-07-12T16:18:18Z,,19.3147893667221,executeDiagnostics
+executeVisitContextDiagnostics,2023-07-12T16:37:37Z,,18.0030610561371,executeDiagnostics
+getIncidenceRate,2023-07-12T16:37:56Z,2379,2.67731320063273,computeIncidenceRates
+computeIncidenceRates,2023-07-12T16:37:56Z,,2.69482942024867,executeDiagnostics
+executeCohortRelationshipDiagnostics,2023-07-12T16:40:37Z,,1.03999090194702,executeDiagnostics
+getDbCovariateData,2023-07-12T16:40:38Z,2379,4.54743301471074,getCohortCharacteristics
+executeCohortCharacterization,2023-07-12T16:40:38Z,,4.80789311726888,executeDiagnostics
+exportConceptInformation,2023-07-12T16:45:27Z,,1.34195611476898,executeDiagnostics
+DeleteConceptIdTable,2023-07-12T16:46:47Z,,0.0908482074737549,executeDiagnostics
+executeDiagnostics,2023-07-12T16:17:37Z,,29.1775559663773,
+writeResultsZip,2023-07-12T16:46:48Z,,1.59599709510803,executeDiagnostics

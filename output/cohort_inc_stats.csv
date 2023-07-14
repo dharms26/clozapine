@@ -1,0 +1,9 @@
+﻿"database_id","cohort_id","rule_sequence","mode_id","person_count","gain_count","person_total"
+"database_schema",2379,0,0,1606,0,1638
+"database_schema",2379,1,0,347,1142,1638
+"database_schema",2379,3,0,1462,56,1638
+"database_schema",2379,2,0,1638,0,1638
+"database_schema",2379,2,1,1638,0,1638
+"database_schema",2379,0,1,1606,0,1638
+"database_schema",2379,1,1,347,1142,1638
+"database_schema",2379,3,1,1462,56,1638

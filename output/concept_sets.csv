@@ -1,0 +1,622 @@
+﻿"cohort_id","concept_set_id","concept_set_sql","concept_set_name","concept_set_expression"
+2379,0,"SELECT 0 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4301322,727944,749672,35835430,36368569,46291681,19081113,45779635,36212657)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4301322,727944,749672,35835430,36368569,46291681,19081113,45779635,36212657)
+  and c.invalid_reason is null
+
+) I
+) C","Clozapine","[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4301322,
+""CONCEPT_NAME"": ""Clozapine"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""387568001"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   727944,
+""CONCEPT_NAME"": ""CLOZAPINE - clozapine tablet"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""17cfeede-2f72-ebe4-4b63-fdd7ed149231"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                   749672,
+""CONCEPT_NAME"": ""CLOZAPINE - clozapine tablet"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""4bb4e035-7dbc-4582-8e46-3f128f6c2790"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 35835430,
+""CONCEPT_NAME"": ""CLOZAPINE - clozapine tablet"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""baeb67d1-c4a3-533d-e053-2a95a90a51c6"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 36368569,
+""CONCEPT_NAME"": ""CLOZAPINE - clozapine tablet"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""9db7aefb-f607-4158-a310-181e631bc648"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 46291681,
+""CONCEPT_NAME"": ""CLOZARIL - clozapine tablet"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0cf63b13-48b2-4b07-b241-617725b52f6b"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 19081113,
+""CONCEPT_NAME"": ""clozapine 100 MG"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""315705"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Clinical Drug Comp"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45779635,
+""CONCEPT_NAME"": ""clozapine 25mg/1 / 50mg/1 / 100mg/1 ORAL TABLET"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""0f04d6b0-8d56-4097-ace7-418d0d99f665"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""SPL"",
+""CONCEPT_CLASS_ID"": ""Prescription Drug"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 36212657,
+""CONCEPT_NAME"": ""clozapine Oral Product"",
+""STANDARD_CONCEPT"": ""C"",
+""STANDARD_CONCEPT_CAPTION"": ""Classification"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1153930"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Clinical Dose Group"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+2379,2,"SELECT 2 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4219336,3229143,3323369,4218197,3343185,4010813)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4219336,3229143,3323369,4218197,3343185,4010813)
+  and c.invalid_reason is null
+
+) I
+) C","tobacco use","[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4219336,
+""CONCEPT_NAME"": ""Tobacco"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39953003"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3229143,
+""CONCEPT_NAME"": ""Tobacco - substance"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39953003"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3323369,
+""CONCEPT_NAME"": ""Snuff tobacco"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39789004"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4218197,
+""CONCEPT_NAME"": ""Snuff tobacco"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39789004"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3343185,
+""CONCEPT_NAME"": ""Tobacco smoke"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""102407002"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4010813,
+""CONCEPT_NAME"": ""Tobacco smoke"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""102407002"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+2379,3,"SELECT 3 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (3449767,45767570)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (3449767,45767570)
+  and c.invalid_reason is null
+
+) I
+) C","Psychotropics","[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  3449767,
+""CONCEPT_NAME"": ""On psychotropic medication"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705024000"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 45767570,
+""CONCEPT_NAME"": ""On psychotropic medication"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""705024000"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+2379,4,"SELECT 4 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (4219336,3229143,3323369,4218197,3343185,4010813,4275495,35225271,4268843,4005823)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (4219336,3229143,3323369,4218197,3343185,4010813,4275495,35225271,4268843,4005823)
+  and c.invalid_reason is null
+
+) I
+) C","tobacco use 2","[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                  4219336,
+""CONCEPT_NAME"": ""Tobacco"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39953003"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3229143,
+""CONCEPT_NAME"": ""Tobacco - substance"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39953003"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3323369,
+""CONCEPT_NAME"": ""Snuff tobacco"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39789004"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4218197,
+""CONCEPT_NAME"": ""Snuff tobacco"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""39789004"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  3343185,
+""CONCEPT_NAME"": ""Tobacco smoke"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""102407002"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""Nebraska Lexicon"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4010813,
+""CONCEPT_NAME"": ""Tobacco smoke"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""102407002"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Substance"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4275495,
+""CONCEPT_NAME"": ""Tobacco smoking behavior - finding"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""365981007"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 35225271,
+""CONCEPT_NAME"": ""Tobacco use"",
+""STANDARD_CONCEPT"": ""N"",
+""STANDARD_CONCEPT_CAPTION"": ""Non-Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""Z72.0"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""ICD10CM"",
+""CONCEPT_CLASS_ID"": ""4-char billing code"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4268843,
+""CONCEPT_NAME"": ""Tobacco use and exposure - finding"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""365980008"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                  4005823,
+""CONCEPT_NAME"": ""Tobacco user"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""110483000"",
+""DOMAIN_ID"": ""Observation"",
+""VOCABULARY_ID"": ""SNOMED"",
+""CONCEPT_CLASS_ID"": ""Clinical Finding"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"
+2379,5,"SELECT 5 as codeset_id, c.concept_id FROM (select distinct I.concept_id FROM
+( 
+  select concept_id from @vocabulary_database_schema.CONCEPT where concept_id in (35606386,35603053,46275749,35604630,43296387,40230763)
+UNION  select c.concept_id
+  from @vocabulary_database_schema.CONCEPT c
+  join @vocabulary_database_schema.CONCEPT_ANCESTOR ca on c.concept_id = ca.descendant_concept_id
+  and ca.ancestor_concept_id in (35606386,35603053,46275749,35604630,43296387,40230763)
+  and c.invalid_reason is null
+
+) I
+) C","Non-clozapine Psychotic Symptom Treatment","[
+ {
+ ""concept"": {
+ ""CONCEPT_ID"":                 35606386,
+""CONCEPT_NAME"": ""risperidone Injection [Risperdal]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1743577"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 35603053,
+""CONCEPT_NAME"": ""olanzapine Injection [Zyprexa]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1718927"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 46275749,
+""CONCEPT_NAME"": ""aripiprazole Injection [Abilify]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1659784"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 35604630,
+""CONCEPT_NAME"": ""ziprasidone Injection [Geodon]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1727277"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 43296387,
+""CONCEPT_NAME"": ""paliperidone Injection [Invega]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""OMOP556493"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm Extension"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+},
+{
+ ""concept"": {
+ ""CONCEPT_ID"":                 40230763,
+""CONCEPT_NAME"": ""lurasidone Oral Tablet [Latuda]"",
+""STANDARD_CONCEPT"": ""S"",
+""STANDARD_CONCEPT_CAPTION"": ""Standard"",
+""INVALID_REASON"": ""V"",
+""INVALID_REASON_CAPTION"": ""Valid"",
+""CONCEPT_CODE"": ""1040035"",
+""DOMAIN_ID"": ""Drug"",
+""VOCABULARY_ID"": ""RxNorm"",
+""CONCEPT_CLASS_ID"": ""Branded Drug Form"" 
+},
+""isExcluded"": false,
+""includeDescendants"": true,
+""includeMapped"": false 
+} 
+]"

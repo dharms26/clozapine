@@ -1,0 +1,38 @@
+database_id,start_time,variable_field,value_field
+database_schema,TM_2023-07-12 12:17:37,timeZone,America/New_York
+database_schema,TM_2023-07-12 12:17:37,runTime,29.1775559663773
+database_schema,TM_2023-07-12 12:17:37,runTimeUnits,mins
+database_schema,TM_2023-07-12 12:17:37,packageDependencySnapShotJson,{}
+database_schema,TM_2023-07-12 12:17:37,argumentsAtDiagnosticsInitiationJson,"{
+	""runInclusionStatistics"" : true,
+	""runIncludedSourceConcepts"" : true,
+	""runOrphanConcepts"" : true,
+	""runTimeSeries"" : false,
+	""runVisitContext"" : true,
+	""runBreakdownIndexEvents"" : true,
+	""runIncidenceRate"" : true,
+	""runTemporalCohortCharacterization"" : true,
+	""minCellCount"" : 5,
+	""minCharacterizationMean"" : 0.010000000000000000208167,
+	""incremental"" : false,
+	""temporalCovariateSettings"" : [
+		""getDefaultCovariateSettings""
+	]
+}"
+database_schema,TM_2023-07-12 12:17:37,rversion,R version 4.1.2 (2021-11-01)
+database_schema,TM_2023-07-12 12:17:37,currentPackage,CohortDiagnostics
+database_schema,TM_2023-07-12 12:17:37,currentPackageVersion,3.2.2
+database_schema,TM_2023-07-12 12:17:37,sourceDescription,"Data is from 2017 - 2023 and comprises of fully adjudicated medical and pharmacy claims. It contains a longitudinal view of inpatient and outpatient services, prescription and office/outpatient administered drugs, costs and enrollment information. With IQVIA Adjudicated Health Plan Claims, an enrolled patient can be tracked across all sites of care: hospital, specialist, emergency room, pharmacy, primary care, and more.�"
+database_schema,TM_2023-07-12 12:17:37,cdmSourceName,PharMetrics Plus
+database_schema,TM_2023-07-12 12:17:37,sourceReleaseDate,NA
+database_schema,TM_2023-07-12 12:17:37,cdmVersion,v5.3.1
+database_schema,TM_2023-07-12 12:17:37,cdmReleaseDate,2022-08-31
+database_schema,TM_2023-07-12 12:17:37,vocabularyVersion,v5.0 22-JUN-22
+database_schema,TM_2023-07-12 12:17:37,datasourceName,PharMetrics Plus
+database_schema,TM_2023-07-12 12:17:37,datasourceDescription,"Data is from 2017 - 2023 and comprises of fully adjudicated medical and pharmacy claims. It contains a longitudinal view of inpatient and outpatient services, prescription and office/outpatient administered drugs, costs and enrollment information. With IQVIA Adjudicated Health Plan Claims, an enrolled patient can be tracked across all sites of care: hospital, specialist, emergency room, pharmacy, primary care, and more.�"
+database_schema,TM_2023-07-12 12:17:37,vocabularyVersionCdm,v5.0 22-JUN-22
+database_schema,TM_2023-07-12 12:17:37,observationPeriodMinDate,2017-01-01
+database_schema,TM_2023-07-12 12:17:37,observationPeriodMaxDate,2022-06-30
+database_schema,TM_2023-07-12 12:17:37,personsInDatasource,34808145
+database_schema,TM_2023-07-12 12:17:37,recordsInDatasource,37145088
+database_schema,TM_2023-07-12 12:17:37,personDaysInDatasource,20257950044
