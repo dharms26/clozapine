@@ -4,7 +4,6 @@ library(DatabaseConnector)
 library(CDMConnector)
 library(dplyr)
 library(ohdsilab)
-# library(aouFI)
 library(here)
 library(CohortGenerator)
 
