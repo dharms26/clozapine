@@ -8,12 +8,7 @@ library(here)
 library(CohortGenerator)
 
 
-
 # Credentials
-
-# Either set here, or just save as strings as preferred. This is for the db connection
-# usr = keyring::key_set("lab_user")
-# pw  = keyring::key_set("lab_password")
 
 usr = keyring::key_get("lab_user")
 pw  = keyring::key_get("lab_password")
@@ -75,9 +70,13 @@ cohortsGenerated <- generateCohortSet(connectionDetails = connectionDetails,
 
 ################### OK NOW DO STUFF LOCALLY ###################
 
+# Create one table with all five cohorts
+
 cohorts = tbl(con, inDatabaseSchema(my_schema, "clozapine_project")) %>% collect()
 
 head(cohorts)
+
+# mutate table to have 1 column for each cohort
 
 cohort_wide = cohorts %>%
   mutate(cohort = case_when(
@@ -87,12 +86,15 @@ cohort_wide = cohorts %>%
     cohort_definition_id  == 2774 ~ "clean",
     cohort_definition_id  == 2775 ~ "persistent"
   )) %>%
+  # delete unnecessary columns
   select(-cohort_definition_id, -cohort_start_date, -cohort_end_date) %>% 
   mutate(value = 1) %>%
   tidyr::pivot_wider(names_from = cohort, values_from = value) %>%
   select(subject_id, target, comparator, clean, relapse, persistent) %>%
+  # only keep members of outcome or comparator cohort
   filter(!is.na(target) | !is.na(comparator))
 
+# define sub-tables with certain outcomes within target cohort
 target_clean <- cohort_wide %>%
   filter(target==1 & clean==1)
 target_relapse <- cohort_wide %>%
@@ -102,11 +104,13 @@ target_persistent <- cohort_wide %>%
 target_tot <- cohort_wide %>%
   filter(target==1)
 
+# sum members of each outcome cohort
 target_clean_ct <- sum(target_clean$target)
 target_relapse_ct <- sum(target_relapse$target)
 target_persistent_ct <-  sum(target_persistent$target)
 target_tot_ct <- sum(target_tot$target)
 
+# Same process for comparator cohort
 comp_clean <- cohort_wide %>%
   filter(comparator==1 & clean==1)
 comp_relapse <- cohort_wide %>%
@@ -121,7 +125,17 @@ comp_relapse_ct <- sum(comp_relapse$comparator)
 comp_persistent_ct <-  sum(comp_persistent$comparator)
 comp_tot_ct <- sum(comp_tot$comparator)
 
+# create data frame with results
+outcome_breakdown <- data.frame("targ/comp" = c("target", "target", "target",
+                                                "comparator", "comparator", "comparator"),
+                                
+                                "outcome" = c("clean", "relapse", "persistent", 
+                                              "clean", "relapse", "persistent"),
+                        
+                                "percentage" = round(100*c(target_clean_ct/target_tot_ct,
+                                                     target_relapse_ct/target_tot_ct,
+                                                     target_persistent_ct/target_tot_ct,
+                                                     comp_clean_ct/comp_tot_ct,
+                                                     comp_relapse_ct/comp_tot_ct,
+                                                     comp_persistent_ct/comp_tot_ct), digits = 1))
 
-# sum(cohort_wide$target, na.rm = TRUE)
-# sum(cohort_wide$comparator, na.rm = TRUE)
-# sum(c(cohort_wide$clean, cohort_wide$relapse, cohort_wide$persistent), na.rm = TRUE)
